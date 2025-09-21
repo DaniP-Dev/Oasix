@@ -38,4 +38,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-mont), Arial, Helvetica, sans-serif;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+}
+
+html {
+  overflow-x: hidden; /* Prevenir scroll horizontal en el elemento raíz */
+}
+
+/* Fondo de la sección de inicio */
+.inicio-background {
+  background-image: url('/imgs/fondoInicio.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Overlay para mejorar legibilidad */
+.inicio-overlay {
+  background: linear-gradient(
+    135deg, 
+    rgba(0, 0, 0, 0.6) 0%, 
+    rgba(0, 0, 0, 0.3) 50%, 
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
