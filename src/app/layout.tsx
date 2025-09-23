@@ -14,7 +14,11 @@ export const metadata: Metadata = {
   description: "Portfolio de Leydi Vega - Especialista en crear soluciones informáticas adaptables usando diferentes frameworks y metodologías ágiles",
   keywords: "desarrolladora, soluciones informáticas, apps, webs, frameworks, metodologías ágiles",
   authors: [{ name: "Leydi Vega" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({

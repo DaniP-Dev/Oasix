@@ -19,7 +19,7 @@ export default function AboutSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-6 text-center md:text-left">
               Acerca De Mí
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
