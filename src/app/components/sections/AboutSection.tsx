@@ -23,7 +23,7 @@ export default function AboutSection() {
               Acerca De Mí
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-              ¡Hola! Soy <span className="font-bold text-pink-600">Leydi Vega</span>, una desarrolladora apasionada por crear 
+              ¡Hola! Soy <span className="font-bold text-pink-600">Leidy Vega</span>, una desarrolladora apasionada por crear 
               <span className="font-semibold"> soluciones informáticas innovadoras</span> que resuelvan problemas reales.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-6">

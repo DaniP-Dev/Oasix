@@ -63,7 +63,7 @@ export default function Aside({
                 LV
               </div>
             </div>
-            <h1 className="text-2xl font-bold mb-2 text-white">Leydi Vega</h1>
+            <h1 className="text-2xl font-bold mb-2 text-white">Leidy Vega</h1>
             <p className="text-slate-300 text-lg mb-6">
               Desarrolladora de Soluciones Informáticas
             </p>
@@ -203,7 +203,7 @@ export default function Aside({
           <div className="mt-auto pt-8">
             <p className="text-slate-400 text-sm text-center">
               © Copyright{" "}
-              <span className="font-semibold text-white">Leydi Vega</span> 2025
+              <span className="font-semibold text-white">Leidy Vega</span> 2025
             </p>
           </div>
         </div>

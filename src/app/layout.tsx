@@ -10,10 +10,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Leydi Vega - Desarrolladora de Soluciones Informáticas",
-  description: "Portfolio de Leydi Vega - Especialista en crear soluciones informáticas adaptables usando diferentes frameworks y metodologías ágiles",
+  title: "Leidy Vega - Desarrolladora de Soluciones Informáticas",
+  description: "Portfolio de Leidy Vega - Especialista en crear soluciones informáticas adaptables usando diferentes frameworks y metodologías ágiles",
   keywords: "desarrolladora, soluciones informáticas, apps, webs, frameworks, metodologías ágiles",
-  authors: [{ name: "Leydi Vega" }],
+  authors: [{ name: "Leidy Vega" }],
 };
 
 export const viewport = {

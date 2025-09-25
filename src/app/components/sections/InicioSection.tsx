@@ -37,7 +37,7 @@ export default function InicioSection({ onSectionClick }: InicioSectionProps) {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-xl sm:text-2xl text-gray-100 max-w-3xl"
         >
-          Soy <span className="font-bold text-pink-400">Leydi Vega</span>, desarrolladora especializada en crear 
+          Soy <span className="font-bold text-pink-400">Leidy Vega</span>, desarrolladora especializada en crear 
           <span className="font-semibold"> soluciones informáticas adaptables</span> - desde apps móviles hasta aplicaciones web complejas
         </motion.p>
         <motion.p 
