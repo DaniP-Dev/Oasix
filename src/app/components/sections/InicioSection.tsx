@@ -19,83 +19,103 @@ export default function InicioSection({ onSectionClick }: InicioSectionProps) {
       className="min-h-screen relative overflow-hidden bg-black"
     >
       {/* ===== MOBILE VIEW ===== */}
-      <div className="lg:hidden min-h-screen relative flex items-center justify-center p-8 sm:p-12">
+      <div className="lg:hidden min-h-screen relative flex flex-col justify-between p-6 sm:p-8">
         {/* mobile background using Tailwind arbitrary value */}
         <div className="absolute inset-0 bg-[url('/imgs/imagen.png')] bg-cover bg-center bg-no-repeat" />
         {/* dark overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
 
-        <div className="relative z-20 w-full max-w-2xl text-center">
+        {/* Top header area: avoid covering face by keeping these near the top */}
+        <div className="relative z-20 w-full max-w-2xl text-center pt-6">
           <motion.h1
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-4xl sm:text-6xl font-bold text-yellow-400 mb-4"
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-3xl sm:text-5xl font-bold text-yellow-400 mb-2"
           >
             Leidy Vega
           </motion.h1>
 
           <motion.h2
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-2xl sm:text-3xl font-semibold text-white mb-8 leading-tight"
+            transition={{ delay: 0.35, duration: 0.5 }}
+            className="text-base sm:text-2xl font-semibold text-white mb-4 leading-tight px-4"
           >
-            Desarrolladora freelancer creando<br />
+            Desarrolladora freelancer creando
+            <br />
             soluciones digitales adaptables
           </motion.h2>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="mb-8"
+            transition={{ delay: 0.55, duration: 0.5 }}
+            className="mb-2"
           >
             <DarkButton label="OFF" />
           </motion.div>
+        </div>
 
+        {/* Bottom area: badges + CTAs — pushed to bottom so they don't block the face */}
+        <div className="relative z-20 w-full max-w-2xl text-center pb-8">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="space-y-4 mb-12"
+            transition={{ delay: 0.7, duration: 0.5 }}
+            className="flex flex-col items-center gap-4 mb-6"
           >
-            {/* Bubble 1 */}
-            <div className="relative inline-block -rotate-3">
-              <div className="bg-blue-600 text-white px-6 py-3 rounded-2xl inline-block text-lg font-bold shadow-lg">
-                DESARROLLO
+            {/* Row: DESARROLLO + APPS side-by-side */}
+            <div className="w-full flex justify-center gap-4">
+              <div className="relative inline-block -rotate-3">
+                <Image
+                  src="/imgs/m1.png"
+                  alt="DESARROLLO"
+                  width={160}
+                  height={56}
+                  className="rounded-2xl shadow-lg object-contain inline-block"
+                />
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <span className="text-white text-base font-bold">DESARROLLO</span>
+                </div>
               </div>
-              <svg className="absolute -right-3 bottom-0 w-6 h-6 text-blue-600 fill-current" viewBox="0 0 6 6" aria-hidden>
-                <path d="M0 0 L6 3 L0 6 z" />
-              </svg>
+
+              <div className="relative inline-block rotate-3">
+                <Image
+                  src="/imgs/m2.png"
+                  alt="APPS"
+                  width={140}
+                  height={56}
+                  className="rounded-2xl shadow-lg object-contain inline-block"
+                />
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <span className="text-white text-base font-bold">APPS</span>
+                </div>
+              </div>
             </div>
 
-            {/* Bubble 2 */}
-            <div className="relative inline-block ml-8 rotate-3">
-              <div className="bg-purple-600 text-white px-6 py-3 rounded-2xl inline-block text-lg font-bold shadow-lg">
-                APPS
+            {/* Row: WEBS centered */}
+            <div className="w-full flex justify-center">
+              <div className="relative inline-block -rotate-2">
+                <Image
+                  src="/imgs/m3.png"
+                  alt="WEBS"
+                  width={170}
+                  height={56}
+                  className="rounded-2xl shadow-lg object-contain inline-block"
+                />
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <span className="text-white text-base font-bold">WEBS</span>
+                </div>
               </div>
-              <svg className="absolute -left-3 bottom-0 w-6 h-6 text-purple-600 fill-current transform rotate-180" viewBox="0 0 6 6" aria-hidden>
-                <path d="M0 0 L6 3 L0 6 z" />
-              </svg>
-            </div>
-
-            {/* Bubble 3 */}
-            <div className="relative inline-block ml-16 -rotate-2">
-              <div className="bg-gray-500 text-white px-6 py-3 rounded-2xl inline-block text-lg font-bold shadow-lg">
-                WEBS
-              </div>
-              <svg className="absolute -right-3 bottom-0 w-6 h-6 text-gray-500 fill-current" viewBox="0 0 6 6" aria-hidden>
-                <path d="M0 0 L6 3 L0 6 z" />
-              </svg>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="flex gap-4 items-center flex-col sm:flex-row justify-center"
+            transition={{ delay: 0.95, duration: 0.45 }}
+            className="flex gap-4 items-center justify-center"
           >
             <button
               onClick={() => onSectionClick("portfolio")}
@@ -151,34 +171,46 @@ export default function InicioSection({ onSectionClick }: InicioSectionProps) {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="space-y-4 mb-12"
           >
-            {/* Bubble 1 */}
+            {/* Image 1 */}
             <div className="relative inline-block -rotate-3">
-              <div className="bg-blue-600 text-white px-6 py-3 rounded-2xl inline-block text-lg font-bold shadow-lg">
-                DESARROLLO
+              <Image
+                src="/imgs/m1.png"
+                alt="DESARROLLO"
+                width={260}
+                height={80}
+                className="rounded-2xl shadow-lg object-contain inline-block"
+              />
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span className="text-white text-lg font-bold">DESARROLLO</span>
               </div>
-              <svg className="absolute -right-3 bottom-0 w-6 h-6 text-blue-600 fill-current" viewBox="0 0 6 6" aria-hidden>
-                <path d="M0 0 L6 3 L0 6 z" />
-              </svg>
             </div>
 
-            {/* Bubble 2 */}
+            {/* Image 2 */}
             <div className="relative inline-block ml-8 rotate-3">
-              <div className="bg-purple-600 text-white px-6 py-3 rounded-2xl inline-block text-lg font-bold shadow-lg">
-                APPS
+              <Image
+                src="/imgs/m2.png"
+                alt="APPS"
+                width={220}
+                height={80}
+                className="rounded-2xl shadow-lg object-contain inline-block"
+              />
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span className="text-white text-lg font-bold">APPS</span>
               </div>
-              <svg className="absolute -left-3 bottom-0 w-6 h-6 text-purple-600 fill-current transform rotate-180" viewBox="0 0 6 6" aria-hidden>
-                <path d="M0 0 L6 3 L0 6 z" />
-              </svg>
             </div>
 
-            {/* Bubble 3 */}
+            {/* Image 3 */}
             <div className="relative inline-block ml-16 -rotate-2">
-              <div className="bg-gray-500 text-white px-6 py-3 rounded-2xl inline-block text-lg font-bold shadow-lg">
-                WEBS
+              <Image
+                src="/imgs/m3.png"
+                alt="WEBS"
+                width={240}
+                height={80}
+                className="rounded-2xl shadow-lg object-contain inline-block"
+              />
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span className="text-white text-lg font-bold">WEBS</span>
               </div>
-              <svg className="absolute -right-3 bottom-0 w-6 h-6 text-gray-500 fill-current" viewBox="0 0 6 6" aria-hidden>
-                <path d="M0 0 L6 3 L0 6 z" />
-              </svg>
             </div>
           </motion.div>
 

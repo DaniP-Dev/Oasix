@@ -1,12 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Skills from "../Skills";
 
 interface PortfolioSectionProps {
   handleSectionClick: (sectionId: string) => void;
 }
 
-export default function PortfolioSection({ handleSectionClick }: PortfolioSectionProps) {
+export default function PortfolioSection({
+  handleSectionClick,
+}: PortfolioSectionProps) {
   return (
     <motion.section
       key="portfolio"
@@ -31,9 +34,9 @@ export default function PortfolioSection({ handleSectionClick }: PortfolioSectio
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto"
         >
-          Cada proyecto representa una solución informática única,
-          desarrollada con metodologías ágiles y frameworks adaptables
-          para crear experiencias digitales excepcionales.
+          Cada proyecto representa una solución informática única, desarrollada
+          con metodologías ágiles y frameworks adaptables para crear
+          experiencias digitales excepcionales.
         </motion.p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,9 +60,8 @@ export default function PortfolioSection({ handleSectionClick }: PortfolioSectio
                 TaskFlow Mobile
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                App móvil de gestión de tareas con React Native,
-                implementando metodologías ágiles para equipos
-                distribuidos.
+                App móvil de gestión de tareas con React Native, implementando
+                metodologías ágiles para equipos distribuidos.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 text-xs rounded-full">
@@ -103,9 +105,8 @@ export default function PortfolioSection({ handleSectionClick }: PortfolioSectio
                 EduConnect Platform
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                Plataforma educativa web con Next.js, diseñada con
-                frameworks adaptables para instituciones de cualquier
-                tamaño.
+                Plataforma educativa web con Next.js, diseñada con frameworks
+                adaptables para instituciones de cualquier tamaño.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs rounded-full">
@@ -149,9 +150,8 @@ export default function PortfolioSection({ handleSectionClick }: PortfolioSectio
                 Analytics Pro Dashboard
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                Dashboard de analíticas en tiempo real con Vue.js,
-                implementando DevOps para una solución escalable y
-                adaptable.
+                Dashboard de analíticas en tiempo real con Vue.js, implementando
+                DevOps para una solución escalable y adaptable.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 text-xs rounded-full">
@@ -195,9 +195,8 @@ export default function PortfolioSection({ handleSectionClick }: PortfolioSectio
                 ShopSmart E-commerce
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                Plataforma de e-commerce completa con Flutter y
-                microservicios, diseñada para adaptarse a cualquier
-                modelo de negocio.
+                Plataforma de e-commerce completa con Flutter y microservicios,
+                diseñada para adaptarse a cualquier modelo de negocio.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 text-xs rounded-full">
@@ -241,9 +240,8 @@ export default function PortfolioSection({ handleSectionClick }: PortfolioSectio
                 SmartHome IoT Control
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                Sistema de control IoT con React y Python,
-                implementando soluciones adaptables para hogar
-                inteligente.
+                Sistema de control IoT con React y Python, implementando
+                soluciones adaptables para hogar inteligente.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 text-xs rounded-full">
@@ -287,9 +285,8 @@ export default function PortfolioSection({ handleSectionClick }: PortfolioSectio
                 AI Assistant Bot
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                Chatbot inteligente con procesamiento de lenguaje
-                natural, desarrollado con frameworks adaptables y
-                metodologías ágiles.
+                Chatbot inteligente con procesamiento de lenguaje natural,
+                desarrollado con frameworks adaptables y metodologías ágiles.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-300 text-xs rounded-full">
@@ -325,9 +322,8 @@ export default function PortfolioSection({ handleSectionClick }: PortfolioSectio
             ¿Tienes un proyecto en mente?
           </h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-            Trabajemos juntos para crear soluciones informáticas
-            adaptables que transformen tu idea en una realidad digital
-            exitosa.
+            Trabajemos juntos para crear soluciones informáticas adaptables que
+            transformen tu idea en una realidad digital exitosa.
           </p>
           <button
             onClick={() => handleSectionClick("inicio")}
@@ -336,6 +332,9 @@ export default function PortfolioSection({ handleSectionClick }: PortfolioSectio
             Iniciar conversación
           </button>
         </motion.div>
+        <div className="mt-12">
+          <Skills />
+        </div>
       </div>
     </motion.section>
   );
