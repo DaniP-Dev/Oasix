@@ -107,9 +107,15 @@ export default function AboutSection() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.5, duration: 0.6, type: "spring" }}
-              className="w-80 h-80 mx-auto bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-6xl font-bold text-white mb-6"
+              className="w-80 h-80 mx-auto rounded-full overflow-hidden flex items-center justify-center mb-6"
             >
-              LV
+              {/* Imagen del about: public/imgs/fotoAbout.jpeg */}
+              <img
+                src="/imgs/fotoAbout.jpeg"
+                alt="Leidy Vega"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </motion.div>
             <div className="grid grid-cols-2 gap-4 text-center">
               <motion.div 

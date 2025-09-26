@@ -47,7 +47,7 @@ html {
 
 /* Fondo de la sección de inicio */
 .inicio-background {
-  background-image: url('/imgs/fondoInicio.jpeg');
+  background-image: url('/imgs/imagen.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
